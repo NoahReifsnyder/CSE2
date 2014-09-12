@@ -4,7 +4,7 @@
 //CSE002
 // 
 //recieve input from user to calculate cost of some Big macs, when given 
-//the amount of big macs and the cost for 1
+//the amount of big macs and the cost for 1, and the tax
 import java.util.Scanner;
 //importated a utility that allows me to accept input from user
 public class BigMac {
@@ -22,7 +22,7 @@ public class BigMac {
     double cost$;
     int dollars,   
     dimes,
-    pennies;
+    pennies; //defining variables to store cost
     cost$ = nBigMacs*bigMac$*(1+taxRate); //total cost, extra decimal places
     dollars=(int)cost$; //round down, total dollars minus cents
     dimes=(int)(cost$*10)%10; //the tenths place from the cost
