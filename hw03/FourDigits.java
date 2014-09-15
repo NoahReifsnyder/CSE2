@@ -16,6 +16,5 @@ public class FourDigits{
     input*=10000; //move the first four decimals infront of the decimal place
     int output=(int) input; //remove the extra decimal places/what I want to output to the user
     System.out.println("The first four digits after the decimal place are "+ output);
-    System.out.println(castedInput);
     }//end of main method
 }//end of class
