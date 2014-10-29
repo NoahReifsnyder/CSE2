@@ -1,3 +1,7 @@
+//hw8
+//Noah Reifsnyder
+//10/28/14
+//CSE2
 import java.util.Scanner;
 public class HW8{
     public static char getInput(Scanner myScanner, String list){
