@@ -78,7 +78,7 @@ System.out.print("Go again? Enter 'y' or 'Y', anything else to quit- ");
               }//end if
             }//ends forwhile
       }//end forwhile
-      dups-=x.length;
+      dups-=x.length;//it will always match with it self
       if (dups==2){//its 2 because the dup is found twice, once for the first showing, and once for the second showing
           return true;
       }//end if

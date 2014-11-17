@@ -112,13 +112,32 @@ public class PokerOdds{
             }//end if
         }while(loop);
     }//end showHands
+    public static boolean exactlyOneDup (int x[],int y[]){
+      int dups=0;
+      int index=0;
+      for (int i=0;i<x.length;i++){
+          for (int j=0;j<x.length;j++){
+              if (x[i]==x[j]&&i!=j){
+                  dups+=1;
+                  index=i;
+              }//end if
+            }//ends forwhile
+      }//end forwhile
+      if (dups==2){//its 2 because the dup is found twice, once for the first showing, and once for the second showing
+          y[x[index]]+=1;
+          return true;
+      }//end if
+      else{
+          return false;
+      }//ends else
+  }//end exactlyOneDub
     public static void simulateOdds(){
         int[] duplicates= new int[13];//see which card is the dup.
         int deck[]=new int[52];
         int hand[]=new int[5];//allocate for my arrays
         int numDups=0;
         String out="";
-        for (int i=0; i<13; i++){
+         for (int i=0; i<13; i++){
             duplicates[i]=0;
         }//end forwhile//initialize duplicates
         for (int j=0; j<10000; j++){
@@ -127,12 +146,10 @@ public class PokerOdds{
             }//end forwhile
             for (int i=0; i<5; i++){
                 int x=(int)(Math.random()*(52-i));//generates a number from 0-51, represent cards in a deck
-                hand[i]=deck[x];
+                hand[i]=deck[x]%13;
                 deck[x]=deck[51-i];//puts the last card into the taken cards spot
-                if (FindDuplicates.exactlyOneDup(hand)){
-                    duplicates[(int)(hand[i]/4)]+=1;   
-                }//end if
             }//end forwhile
+        exactlyOneDup(hand,duplicates);
         }//end for while
         out+="rank    freq of exactly one pair\n";
         for (int i=12; i>-1; i--){
