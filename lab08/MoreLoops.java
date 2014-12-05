@@ -1,4 +1,4 @@
-//lab 7 MoreLoops
+//lab 8 MoreLoops
 //Noah Reifsnyder
 //12/4/14
 //CSE2
