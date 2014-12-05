@@ -1,3 +1,8 @@
+//lab 9 Methods
+//Noah Reifsnyder
+//12/4/14
+//CSE2
+//Practice using methods
 import java.util.Scanner;
 public class Methods{
     public static int getInt(int input){
