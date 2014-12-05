@@ -8,24 +8,26 @@ public class LoopTheLoop{
 public static void main(String[] args){
     //define class and main method
     Scanner myScanner=new Scanner (System.in);//define scanner
-    int nStars;
+    int nStars=0;
     System.out.print("Please enter an int between 1 and 15:");
-    while (!myScanner.hasNextInt()){
-        myScanner.next();
-        System.out.println("You did not enter an int, please try again");
-        System.out.print("Please enter an int between 1 and 15:");
-    }//ends while
-    nStars=myScanner.nextInt();
-    System.out.println(nStars);
-    while (nStars>=16 || nStars<=0){
-        System.out.println("Your input was not between 1 and 15, please try again");
-        System.out.print("Please enter an int between 1 and 15:");
-        while (!myScanner.hasNextInt()){
-            myScanner.next();
-            System.out.println("You did not enter an int, please try again");
-            System.out.print("Please enter an int between 1 and 15:");
-        }//ends while
-    }//ends while
+    boolean loop=true;
+    do{
+        if (!myScanner.hasNextInt()){
+                System.out.println("You did not enter an int, please try again");
+                System.out.print("Please enter an int between 1 and 15:");
+                nStars=0;
+        }//ends if
+        else{
+            nStars=myScanner.nextInt();
+            System.out.println(nStars);
+            loop=false;
+            if (nStars>=16 || nStars<=0){
+                System.out.println("Your input was not between 1 and 15, please try again");
+                System.out.print("Please enter an int between 1 and 15:");
+                loop=true;
+            }//ends if
+        }//ends else
+    }while (loop);//loops until appropriate input
     int count=0;
     while (count<nStars){
         count++;
