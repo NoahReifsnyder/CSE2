@@ -1,4 +1,4 @@
-//lab06 enigma 1
+//lab06 enigma 2
 //12/4/14
 //Noah Reifsnyder
 //CSE2

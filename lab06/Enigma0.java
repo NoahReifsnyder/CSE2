@@ -1,3 +1,8 @@
+//lab06 enigma 0
+//12/4/14
+//Noah Reifsnyder
+//CSE2
+
 /*Sample of expected output:
  *   Enter an int- 9
  *   You entered 9
