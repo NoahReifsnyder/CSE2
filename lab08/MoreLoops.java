@@ -1,3 +1,8 @@
+//lab 7 MoreLoops
+//Noah Reifsnyder
+//12/4/14
+//CSE2
+//practice with loops, changing loops
 import java.util.Scanner;
 public class MoreLoops{
 	public static void main(String[] arg){
