@@ -1,4 +1,4 @@
-//lab12
+//lab12 Array Math
 //Noah Reifsnyder
 //11/14/14
 //CSE2
